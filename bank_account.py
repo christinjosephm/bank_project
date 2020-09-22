@@ -2,9 +2,9 @@ class Account:
     numOfAccount = 0
     lastAccountNumber = 0
 
-    def __init__(self, firstName, lastName, balance):
-        self.firstName = firstName
-        self.lastName = lastName
+    def __init__(self, first_name, last_name, balance):
+        self.first_name = first_name
+        self.lastName = last_name
         self.balance = balance
         Account.numOfAccount += 1
         Account.lastAccountNumber = +1
@@ -14,27 +14,29 @@ class Account:
         self.balance = self.balance + amount
 
     def withdraw(self, amount):
-        if (amount < self.balance):
+        if amount < self.balance:
             self.balance -= amount
         else:
             print("Not sufficient balance to withdraw!!")
 
     def __str__(self):
-        return f'Account Number: {self.accountNumber} \nFirst Name: {self.firstName} \nLast Name: {self.lastName} \nBalance: {self.balance}'
+        return f'Account Number: {self.accountNumber} \nFirst Name: {self.first_name} \nLast Name:{self.last_name} \nBalance: {self.balance}'
 
-    def setLastAccountNumber(self, number):
-        Account.lastAccountNumber = number
 
-    def getLastAccountNumber(self):
-        return Account.lastAccountNumber
+def get_last_acc_number(self):      # STATIC Functions of Account to get the last account Number
+    return Account.lastAccountNumbe
+
+
+def set_last_acc_number(self, number):  # STATIC Function of Account tp set last account Number
+    Account.lastAccountNumber = number
 
 
 # CLASS BANK
 class Bank:
-    '''
-    CLASS BANK
+    """
+     CLASS BANK
     For all the account managements and storing in file, 'Bank.txt'
-    '''
+    """
     dictAccounts = {}
 
     def __init__(self):
