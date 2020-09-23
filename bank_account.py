@@ -24,7 +24,7 @@ class Account:
 
 
 def get_last_acc_number(self):      # STATIC Functions of Account to get the last account Number
-    return Account.lastAccountNumbe
+    return Account.lastAccountNumber
 
 
 def set_last_acc_number(self, number):  # STATIC Function of Account tp set last account Number
@@ -64,7 +64,3 @@ class Bank:
     def openAccount(self, firstName, lastName, balance):
         acc = Account(firstName, lastName, balance)
         dictAccounts[acc.accountNumber:acc]
-
-
-    def new_func():
-        pass
