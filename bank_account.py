@@ -64,3 +64,6 @@ class Bank:
     def openAccount(self, firstName, lastName, balance):
         acc = Account(firstName, lastName, balance)
         dictAccounts[acc.accountNumber:acc]
+
+    def newfun(self):
+        pass
